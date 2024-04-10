@@ -1,0 +1,21 @@
+{
+  "name": "simrom",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^29.2.0"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "jquery": "^3.7.1",
+    "vue": "^3.4.21",
+    "xel": "^0.25.11"
+  }
+}

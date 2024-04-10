@@ -1,0 +1,48 @@
+#content{
+    display: flex;
+    flex-direction: row;
+}
+
+
+#platform{
+    flex: 0 0 auto;
+    width:150px;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+}
+
+#category{
+    flex: 0 0 auto;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+
+#games{
+    width:100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+}
+
+#property{
+    flex: 0 0 auto;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+
+.panel-inner{
+    padding:10px;
+}
+
+.nav x-button[skin="nav"] {
+    width: 100%;
+    margin-top:4px;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav x-button[skin="nav"] img{
+    width:18px;
+    height:18px;
+    margin-right:10px;
+}

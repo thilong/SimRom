@@ -1,0 +1,27 @@
+html,
+body,
+#app {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#toolbar {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#content {
+    flex: 1 1 auto;
+    overflow: hidden;
+    width: 100%;
+}
