@@ -13,12 +13,24 @@ function createTestData() {
   appData.platforms.push({
     icon: "D:\\XJ.Workspace\\XiaojiAndroidEN\\xiaoji_android_en\\src\\main\\res\\drawable-mdpi\\ic_launcher.png",
     name: 'FC',
-    selected : false
+    selected: false
   })
   appData.platforms.push({
     icon: "D:\\XJ.Workspace\\XiaojiAndroidEN\\xiaoji_android_en\\src\\main\\res\\drawable-mdpi\\ic_launcher.png",
     name: 'SFC',
-    selected : true
+    selected: true
+  })
+  appData.categories.push({
+    name: '全部游戏',
+    selected: false
+  })
+  appData.categories.push({
+    name: '角色扮演',
+    selected: false
+  })
+  appData.categories.push({
+    name: '吞食天地',
+    selected: false
   })
 }
 

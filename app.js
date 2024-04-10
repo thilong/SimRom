@@ -1,11 +1,9 @@
 const { app, BrowserWindow, ipcMain } = require('electron/main')
 const path = require('node:path')
+const fs = require('node:fs')
 const { services, makeChannelName } = require('./services')
 
-global.projectRoot = path.resolve(__dirname, '.')
-
-
-function createWindow() {
+function createMainWindow() {
     const preloadUrl = path.resolve(__dirname, 'preloads/main.js')
     const win = new BrowserWindow({
         width: 1000,
@@ -19,7 +17,7 @@ function createWindow() {
     })
     win.setMenu(null)
     win.loadFile('ui/main.html')
-    win.openDevTools()
+    //win.openDevTools()
 }
 
 function registerServices() {
@@ -36,17 +34,25 @@ function registerServices() {
 
 app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-        createWindow()
+        createMainWindow()
     }
 })
+
 app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit()
     }
 })
+
 app.whenReady().then(() => {
     registerServices()
-    createWindow()
-
+    const dataPath = path.join(app.getPath('userData'), '.simrom.db')
+    //if dataPath exists, load it
+    try {
+        fs.accessSync(dataPath, fs.constants.F_OK)
+        createMainWindow()
+    } catch (e) {
+        createMainWindow()
+    }
 })
 
