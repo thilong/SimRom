@@ -35,7 +35,7 @@ $(async () => {
 
   renderEjs("#app-platforms", "appPlatformList", appData)
 
-  let defaultPlatforms = await window.jsBridge?.platform?.getDefaultPlatforms();
-  console.log(defaultPlatforms)
+  let platforms = await window.jsBridge?.platform?.getWorkspacePlatforms();
+  console.log(platforms)
 });
 
