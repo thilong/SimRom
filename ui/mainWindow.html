@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SIM ROM</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/mainWindow.css">
+</head>
+
+<body>
+  <div id="app">
+    <div id="app-nav">
+      <div id="app-logo">
+        <img src="assets/logo.svg" style="height: 80px;" />
+        <label>SimRom</label>
+      </div>
+      <div id="app-platforms">
+
+      </div>
+      <div id="app-settings">
+        <button></button>
+        <button></button>
+      </div>
+    </div>
+    <div id="app-content">
+
+    </div>
+  </div>
+  <div style="display: none;">
+    <template id="ejs-test">
+      <div>
+        <h1>
+          <%= title; %>
+        </h1>
+        <p>
+          <%= description; %>
+        </p>
+      </div>
+    </template>
+
+    <template id="ejs-appPlatformList">
+      <div id="platform-list">
+        <% platforms.forEach(platform=> { %>
+          <div class="platform" id="platform-<%= platform.name %>">
+            <%- ejsRenderImg(platform.icon) %>
+              <label>
+                <%= platform.name %>
+              </label>
+              <% if(platform.count){ %>
+                <span class="badge">
+                  <%= platform.count %>
+                </span>
+                <% } %>
+          </div>
+          <% }); %>
+      </div>
+    </template>
+  </div>
+</body>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/ejs/ejs.min.js"></script>
+<script src="appRenderer.js"></script>
+<script src="renderer/mainWindow.js"></script>
+
+</html>

@@ -1,0 +1,98 @@
+#app-nav {
+    width: 200px;
+    background-color: #161b22;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px #32373d;
+}
+
+#app-content {
+    flex: 1;
+}
+
+#app-logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-bottom: solid 1px #32373d;
+}
+
+#app-logo label {
+    font-size: 1.5rem;
+}
+
+#app-platforms {
+    flex: 1;
+    overflow: auto;
+    background-color: #202832;
+}
+
+/*platform list styles*/
+@media (max-width: 10000px) {
+    #platform-list {
+        padding: 5px 10px;
+
+    }
+
+    #platform-list .platform {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        padding: 8px 10px;
+        margin-top: 5px;
+    }
+
+    #platform-list .platform *{
+        cursor: pointer;
+    }
+
+    #platform-list .platform:hover {
+        background-color: #323c49;
+    }
+
+    #platform-list .platform.active {
+        background-color: #161b22;
+        border-radius: 5px;
+    }
+
+    #platform-list .platform img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+
+    #platform-list .platform label {
+        flex: 1;
+
+    }
+
+    #platform-list .platform .badge {
+        line-height: 20px;
+        background-color: #32373d;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 10px;
+        font-size: 0.5rem;
+    }
+}
+
+#app-settings {
+    width: 100%;
+    height: 40px;
+    background-color: #161b22;
+    border-top: solid 1px #32373d;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#app-settings>button {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+    background-color: #202832;
+    border: none;
+}

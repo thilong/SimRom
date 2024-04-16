@@ -1,0 +1,15 @@
+<div id="platform-list">
+    <% platforms.forEach(platform=> { %>
+        <div class="platform" id="platform-<%= platform.name %>">
+            <%- ejsRenderImg(platform.icon) %>
+                <label>
+                    <%= platform.name %>
+                </label>
+                <% if(platform.count){ %>
+                    <span class="badge">
+                        <%= platform.count %>
+                    </span>
+                    <% } %>
+        </div>
+        <% }); %>
+</div>
