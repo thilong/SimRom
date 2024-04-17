@@ -1,6 +1,6 @@
 <div id="platform-list">
     <% platforms.forEach(platform=> { %>
-        <div class="platform" id="platform-<%= platform.name %>" onclick="onPlatformClick('<%= platform.name%>')">
+        <div class="platform" id="platform-<%= platform.name %>" onclick="actions.onPlatformClick('<%= platform.name%>')">
             <%- ejsRenderImg(platform.icon) %>
                 <label>
                     <%= platform.name %>

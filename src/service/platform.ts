@@ -27,7 +27,7 @@ export const platformService = {
     getDefaultPlatforms() {
       return defaultPlatforms;
     },
-    async getWorkspacePlatforms() {
+    async getPlatforms() {
       let romsRoot = appPaths.getWorkspace()
       let platforms = []
       let files = fs.readdirSync(romsRoot)
@@ -42,12 +42,18 @@ export const platformService = {
           platforms.push(platform)
         }
       })
-      //console.log("getWorkspacePlatforms: ", platforms)
+      //console.log("getPlatforms: ", platforms)
       return platforms
     },
-    createPlatform(name) {
+    async createPlatform(name) {
       let romsRoot = appPaths.getWorkspace()
 
+    },
+    async getPlatformGames(platform) {
+      
+    },
+    async parseGamesFromMetaFile(platform) {
+        
     }
   }
 }

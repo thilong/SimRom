@@ -6,7 +6,7 @@ import { appPaths } from '../simAppConfig'
 export const ejsService = {
   name: 'ejs',
   functions: {
-    getComponent(name: string): any {
+    getComponent(name): any {
       let ejsComponent = appPaths.pathFromUI(`components/${name}.ejs`);
       const data = fs.readFileSync(ejsComponent,
         { encoding: 'utf8', flag: 'r' });

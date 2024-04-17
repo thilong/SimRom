@@ -1,4 +1,4 @@
-import { contextBridge } from 'electron'
+import { contextBridge, ipcRenderer } from 'electron'
 import { createExposeApiForRenderer } from '../service'
 
-contextBridge.exposeInMainWorld('mainApi', createExposeApiForRenderer());
+contextBridge.exposeInMainWorld('mainApi', createExposeApiForRenderer())

@@ -5,6 +5,7 @@ export class Platform {
     icon: string
     gameCount: number
 
+    path: string
 
 
     constructor(name: string = null, fullName: string = null, ext: string = null) {
@@ -20,4 +21,23 @@ export class Platform {
         this.ext = ext;
         return this;
     }
+
+}
+
+export class Game {
+    name: string
+    platform: string
+    path: string
+    icon: string
+    constructor(name: string = null, platform: string = null, path: string = null) {
+        this.name = name;
+        this.platform = platform;
+        this.path = path;
+        this.icon = null;
+    }
+}
+
+export class SimConfig {
+    romsRoot: string
+    excludeFolder: string = "meta media"
 }
