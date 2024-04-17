@@ -20,7 +20,7 @@ function ejsRenderTagProperty(flag, value) {
 
 async function renderEjsWithEjsComponent(target, template, data) {
     try {
-        let ejsComponent = await window.jsBridge.ejs.getComponent(template)
+        let ejsComponent = await window.mainApi.ejs.getComponent(template)
         //console.log("ejsComponent : ", ejsComponent)
         let ejsRenderResult = ejs.render(ejsComponent, data)
         $(target).html(ejsRenderResult)
@@ -43,7 +43,7 @@ function renderEjsWithEjsTemplte(target, template, data) {
 
 function renderEjs(target, template, data) {
 
-    if (!window.jsBridge || !window.jsBridge.ejs) {
+    if (!window.mainApi || !window.mainApi.ejs) {
         renderEjsWithEjsTemplte(target, "#ejs-" + template, data)
     } else {
         renderEjsWithEjsComponent(target, template, data)

@@ -1,13 +1,13 @@
 <div id="platform-list">
     <% platforms.forEach(platform=> { %>
-        <div class="platform" id="platform-<%= platform.name %>">
+        <div class="platform" id="platform-<%= platform.name %>" onclick="onPlatformClick('<%= platform.name%>')">
             <%- ejsRenderImg(platform.icon) %>
                 <label>
                     <%= platform.name %>
                 </label>
-                <% if(platform.count){ %>
+                <% if(platform.gameCount){ %>
                     <span class="badge">
-                        <%= platform.count %>
+                        <%= platform.gameCount %>
                     </span>
                     <% } %>
         </div>
