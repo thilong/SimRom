@@ -75,7 +75,7 @@ export class MainWindow {
         })
         this.window.setMenu(null)
         this.window.loadFile(appPaths.pathFromUI('mainWindow.html'))
-        //this.window.webContents.openDevTools()
+        this.window.webContents.openDevTools()
         this.window.on('closed', () => {
             this.window = null
         })

@@ -14,19 +14,26 @@ export class SimApp {
 
     onActivate() {
         if (BrowserWindow.getAllWindows().length === 0) {
-            this.mainWindow.show()
+            this.showMainWindow()
         }
     }
 
     onReady() {
         registerServiceForMain()
-        this.mainWindow.show()
+        this.showMainWindow()
     }
 
     onWindowAllClosed() {
         if (process.platform !== 'darwin') {
             app.quit()
         }
+    }
+
+    showMainWindow(){
+        if(!this.mainWindow){
+            this.mainWindow = new MainWindow()
+        }
+        this.mainWindow.show()
     }
 
 }

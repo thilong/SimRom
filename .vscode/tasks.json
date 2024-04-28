@@ -8,6 +8,12 @@
 			"problemMatcher": [],
 			"label": "SimRom: TypeScript Build",
 			"detail": "tsc"
+		},
+		{
+			"type": "shell",
+			"command": "tsc ui/js/common.js --declaration --allowJs --emitDeclarationOnly --outDir ui/js/",
+			"group": "build",
+			"label": "Gen common.js declaration file",
 		}
 	]
 }

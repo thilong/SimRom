@@ -16,6 +16,7 @@ body,
     height: 100%;
     margin: 0;
     padding: 0;
+    -webkit-user-drag: none;
 }
 
 html {
@@ -25,7 +26,6 @@ html {
     background-color: #0d1117;
 }
 
-
 *::-webkit-scrollbar {
     width: 1px;
 }
@@ -34,4 +34,61 @@ html {
     display: flex;
     flex-direction: row;
     overflow: hidden;
+}
+
+
+.btn {
+    background-color: #8daedd;
+    border: 1px solid #8daedd;
+    color: white;
+    border-radius: 6px;
+    padding: 5px 10px;
+}
+
+.hud {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hud.mask {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hud .hud-loading {
+    user-select: none;
+    width: 50px;
+    height: 50px;
+}
+
+.card {
+    background-color: #161b22;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card .card-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .card-body {
+    background-color: #0d1117;
+}
+
+.card .card-footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card .card-footer .btn {
+    margin: 0 5px;
 }
